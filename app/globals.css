@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@theme {
+  --color-forest: #1C4A3B;
+  --color-forest-light: #2A6B56;
+  --color-forest-dark: #102B23;
+  --color-gold: #C9993A;
+  --color-gold-light: #F5C842;
+  --color-cream: #FBF7F0;
+  --color-parchment: #F2EBD9;
+  --color-ink: #1A1A1A;
+  --color-muted: #5C5C5C;
+  --color-border: #E0D9CE;
+  --color-white: #FFFFFF;
+  --color-success: #2D7A4F;
+  --color-error: #C0392B;
+
+  --spacing-18: 4.5rem;
+  --spacing-22: 5.5rem;
+  --spacing-30: 7.5rem;
+  --spacing-34: 8.5rem;
+  --spacing-128: 32rem;
+
+  --font-playfair: var(--font-playfair);
+  --font-cormorant: var(--font-cormorant);
+  --font-dm: var(--font-dm);
+
+  --animate-marquee: marquee 40s linear infinite;
+  --animate-fade-in: fade-in 0.6s ease-out forwards;
+  --animate-fade-in-up: fade-in-up 0.7s ease-out forwards;
+
+  @keyframes marquee {
+    to { transform: translateX(-50%); }
+  }
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes fade-in-up {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+}
+
+@layer base {
+  body {
+    background-color: var(--color-cream);
+    color: var(--color-ink);
+    font-family: var(--font-dm);
+  }
+}
+
